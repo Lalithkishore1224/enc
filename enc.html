@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt & Decrypt Text</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        textarea, input { width: 80%; padding: 10px; margin: 10px; }
+        button { padding: 10px 20px; margin: 10px; cursor: pointer; }
+        .container { max-width: 600px; margin: auto; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Encrypt & Decrypt Messages</h2>
+
+        <textarea id="message" placeholder="Enter message to encrypt"></textarea><br>
+        <button onclick="encryptText()">Encrypt</button>
+
+        <h3>Encrypted Message:</h3>
+        <textarea id="encryptedMessage" readonly></textarea>
+
+        <h3>Secret Key:</h3>
+        <input type="text" id="encryptionKey" readonly>
+
+        <hr>
+
+        <h2>Decrypt Message</h2>
+        <textarea id="decryptMessage" placeholder="Enter encrypted message"></textarea><br>
+        <input type="text" id="decryptKey" placeholder="Enter secret key"><br>
+        <button onclick="decryptText()">Decrypt</button>
+
+        <h3>Decrypted Message:</h3>
+        <textarea id="decryptedOutput" readonly></textarea>
+    </div>
+
+    <script src="enc.js"></script>
+
+</body>
+</html>
